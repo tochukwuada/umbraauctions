@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --umbra-bg: #0a0a0b;
+  --umbra-surface: #141416;
+  --umbra-surface-2: #1c1c20;
+  --umbra-border: #26262b;
+  --umbra-text: #fafafa;
+  --umbra-text-secondary: #a1a1aa;
+  --umbra-text-muted: #71717a;
+  --umbra-accent: #f59e0b;
+  --umbra-accent-strong: #dc2626;
+  --umbra-success: #10b981;
+  --umbra-danger: #ef4444;
+  --umbra-sealed: #8b5cf6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: var(--umbra-bg);
+  color: var(--umbra-text);
+  font-family:
+    "Inter",
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    sans-serif;
+  font-feature-settings: "cv11", "ss01";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a,
+button,
+input,
+textarea {
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease,
+    transform 150ms ease,
+    opacity 150ms ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.font-mono {
+  font-family:
+    "JetBrains Mono",
+    ui-monospace,
+    SFMono-Regular,
+    monospace;
+}
+
+.umbra-panel {
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(28, 28, 32, 0.92), rgba(20, 20, 22, 0.96));
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.015),
+    0 28px 80px rgba(0, 0, 0, 0.28);
+}
+
+.umbra-card-hover:hover {
+  transform: translateY(-2px);
+}
+
+.wallet-adapter-modal-wrapper {
+  background-color: var(--umbra-surface) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 1rem !important;
+}
+
+.wallet-adapter-modal-button-close {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+.wallet-adapter-button,
+.wallet-adapter-modal-title {
+  font-family: inherit !important;
+}
+
+.wallet-adapter-modal-title {
+  color: var(--umbra-text) !important;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button {
+  background-color: rgba(255, 255, 255, 0.03) !important;
+  border-radius: 0.85rem !important;
+}
+
+.wallet-adapter-modal-list .wallet-adapter-button:hover {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
